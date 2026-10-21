@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video in Page</title>
+
+    <style>
+        /* STYLES THE ENTIRE WEBSITE */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+
+        /* STYLE THE VIDEO PLAYER */
+        video{
+            display: block; /* Places the video in its own line */
+            width: 100%; /* Takes up the entire space */
+            aspect-ratio: 16/9; /* Sets a standard widescreen video ratio */
+            height: auto;
+            background-color: black; /* Displays a black bg while the video is loading */
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Video in Website</h1>
+    <p> Watch the video below</p>
+
+    <!-- CREATES A VIDEO PLAYER WITH BUILT-IN PLAYBACK CONTROLS -->
+     <video controls>
+        <source src="video.mp4"; type="video/mp4">
+        Sorry, your browser cannot play this video
+     </video>
+    
+</body>
+</html>

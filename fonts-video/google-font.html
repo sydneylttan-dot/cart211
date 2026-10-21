@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CONNECT TO GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- LOAD AUDIOWIDE AND ROBOTO -->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <style>
+            body {
+                margin: 0;
+                padding: 40px 20px;
+                background-color: white;
+                color: black;
+                font-family: "Robot", sans-serif;
+                line-height: 1.6;
+            }
+
+            .container{
+                max-width: 800px;
+                margin: 0  auto;
+                padding: 40px;
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            /* USE AUDIOWIDE FOR HEADINGS */
+            h1, h2{
+                font-family: "Audiowide", sans-serif;
+                font-weight: 700;
+                line-height: 1.2;
+            }
+
+            h1{
+                font-size: 40px;
+                margin-top: 32px;
+            }
+
+            h2{
+                font-size: 24px;
+                margin-top: 32px;
+            }
+
+            /* USE ROBOTO FOR PARAGRAPHS */
+
+            p{
+                font-family: "Roboto", sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            /* A BUTTON EXAMPLE */
+            .button{
+                display: inline-block;
+                padding: 12px 24px;
+                background-color: blue;
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
+                font-family: "Audiowide", sans-serif;
+                font-size: 600;
+            }
+
+            .button:hover{
+                background-color: rgb(100, 100, 171);
+            }
+
+            /* FONT COMPARISON SECTION */
+            .font-audiowide{
+                font-family: "Audiowide", sans-serif;
+            }
+
+            .font-roboto{
+                font-family: "Roboto", sans-serif;
+            }
+
+            .comparison{
+                padding: 20px;
+                margin-top: 16px;
+                background-color: white;
+                border-radius: 8px;
+            }
+            
+        </style>
+
+</head>
+<body>
+    <main class="container">
+
+        <h1>Look! Fonts!</h1>
+
+        <p> This page is using Google Fonts</p>
+        <a href ="#" class="button">Start Here</a>
+
+        <h2>Meet Audiowide</h2>
+        <div class="comparison">
+            <p class="font-audiowide">
+                This paragraph is using Audiowide
+            </p>
+        </div>
+
+        <h2>Meet Roboto</h2>
+        <div class="comparison">
+            <p class="font-roboto">
+                This paragraph is using Roboto
+            </p>
+        </div>
+
+        <h2>Font Weights</h2>
+        <p style="font-family: 'Roboto', sans-serif; font-weight: 300;">
+            Roboto Light (300)
+        </p>
+        <p style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+            Roboto Regular (400)
+        </p>
+        <p style="font-family: 'Roboto', sans-serif; font-weight: 600;">
+            Roboto Semi Bold (600)
+        </p>
+        <p style="font-family: 'Roboto', sans-serif; font-weight: 800;">
+            Roboto Extra Bold (800)
+        </p>
+
+    </main>
+    
+</body>
+</html>

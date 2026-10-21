@@ -99,9 +99,40 @@
 
          <video id="myVideo" class="full" controls>
             <source src="video.mp4" type="video/mp4">
-            
+
             Sorry, your browser cannot play this video
          </video>
+
+
+         <!-- JAVASCRIPT CHANGE VIDEO SIZE -->
+
+         <script>
+
+            // THIS FUNCTION RUNS WHENEVER A SIZE BUTTON IS CLICKED
+            // THE WORD "SIZE" RECEIVES THE VALUE FROM THE BUTTON
+            // SUCH AS "SMALL", "MEDIUM", "LARGE", "FULL"
+
+            function changeSize(size){
+
+                //FINDS THE VIDEO ELEMENT USING ITS UNIQUE NAME
+                const video = document.getElementById("myVideo");
+
+                //REMOVES ALL FOUR POSSIBLE SIZE CLASSES
+                //THIS PREVENTS OLD SIZE SETTINGS FROM REMAINING ACTIVE
+                video.classList.remove(
+                    "small", 
+                    "medium", 
+                    "large", 
+                    "full"
+                );
+
+                //ADDS THE NEW SIZE CLASS SELECTED BY THE VISITOR 
+                //AND THE CSS THEN APPLIES THE MATCHING WIDTH
+                video.classList.add(size);
+
+            }
+
+         </script>
     
 </body>
 </html>

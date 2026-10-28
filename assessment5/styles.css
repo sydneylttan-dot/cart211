@@ -1,0 +1,47 @@
+body{
+    font-family: 'Roboto', 'Inter', sans-serif;
+    font-weight: 900;
+    /* USE THE DEFAULT SIZE AS THE REFERENCE SIZE */
+    font-size: 1em;
+    /* REMOVE THE INNER SACING AROUND THE PAGE */
+    padding: 0;
+    /* REMOVE THE BROWSER'S DEFAULT OUTER PAGE MARGINS */
+    margin: 0;
+}
+
+/* IMAGE HOVER EFFECTS */
+
+/* POSITION EACH FIGURE SO THE TEXT CAN APPEAR OVER ITS IMAGE */
+
+    .pict figure{
+        /* CREATES A POSITIONING REFERENCE FOR THE CHILD ELEMENT */
+        position: relative;
+        /* ALLOWS FIGURES TO SIT ALONGSIDE EACH OTHER */
+        display: inline-block;
+        /* SHOW A HAND CURSOR WHEN HOVERING OVER THE FIGURE */
+        cursor: pointer;
+    }
+
+    /* MAKE IMAGES FILL AVAILABLE WIDTH */
+    .pict img{
+        width: 100%;
+        /* ANIMATE ZOOM AND TRANSPARENCY CHANGES OVER 0.3S */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* HIDE THE TEXT UNTIL THE IMAGE IS HOVERED OVER */
+    .hover-text{
+        /* HIDES THE TEXT BY DEFAULT */
+        display: none;
+        /* ALLOWS THE TEXT TO SIT ON TOP OF THE IMAGE */
+        position: absolute;
+        bottom: 30px;
+        left: 10px;
+        /* USES A BLACK BG WITH 70% OPACITY */
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 8px;
+        border-radius: 4px;
+        /* KEEP THE TEXT ON ONE LINE */
+        white-space: nowrap;
+    }

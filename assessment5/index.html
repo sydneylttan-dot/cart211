@@ -63,10 +63,27 @@
                 </div>
 
                 <div class="menu1">
-                    <a href="stories.html" class="menu1"> STORIES </a>
-                    <a href="#" class="menu1"> SERIES </a>
-                    <a href="index.html" class="menu1"> ABOUT </a>
+
+                    <!-- THE X BUTTON CLOSES THE MOBILE NAVIGATION -->
+                    <button type="button" class="close-menu" aria-label="Close Navigation Menu">
+                        &times;
+                    </button>
+
+                    <a href="stories.html" class="menuI"> STORIES </a>
+                    <a href="#" class="menuI"> SERIES </a>
+                    <a href="index.html" class="menuI"> ABOUT </a>
                 </div>
+
+                <!-- HAMBURGER BUTTONL DISPLAYED ON MOBILE AND TABLET SCREENS -->
+                <div class="hamburger-menu">
+                    <button type="button" aria-label="Open Navigation Menu">
+                        <!-- FONT AWESOME DISPLAYS THE THREE HORIZONTAL MENU LINES -->
+                        <span class="fa fa-bars" aria-hidden="true">
+
+                        </span>
+                    </button>
+                </div>
+
             </nav>
         </header>
 
@@ -249,6 +266,36 @@
          </footer>
 
     </div>
+
+    <!-- JAVASCRIPT:
+     MAKES THE MOBILE HAMBURGER MENU OPEN AND CLOSE
+     JS ADDS OR REMOVES A CSS CLASS
+     THE CSS DECIDES WHAT THE ENU LOOKS LIKE WHEN THAT CLASS IS PRESENT -->
+
+     <script>
+        // WAIT UNTIL THE HTML DOCUMENT HAS FINISHED LOADING
+        // HTMLThis ENSURES THE BUTTONS EXIST BEFORE JS TRIES TO SELECT THEM
+        document.addEventListener('DOMContentLoaded', () => {
+
+            //FIND THE HAMBURGER BUTTON INSIDE THE MOBIE MENU CONTAINER
+            const hamburgerButton = document.querySelector('.hamburger-menu button');
+
+            //FIND THE X BUTTON USED TO CLOSE THE NAVIGATION MENU
+            const closeButton = document.querySelector('.close-menu');
+
+            //FIND THE CONTAINER HOLDING THE NAVIGATION LINKS
+            const menu1 = document.querySelector('.menu1');
+
+            //WHEN THE HAMBURGER BUTTON IS CLICKED, ADD THE CLASS "menu-deployed" TO THE NAVIGATION MENU. THEN THE CSS USES THIS CLASS TO MAKE THE MENU VISIBLE
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            })
+
+            //WHEN THE X BUTTON IS CLICKED, REMOVE "menu-deployed" SO THAT THE MENU CLOSES
+            closeButton.addEventListener('click', () => {menu1.classList.remove('menu-deployed')
+            });
+        });
+     </script>
     
 </body>
 </html>

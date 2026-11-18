@@ -1,0 +1,116 @@
+h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+header {
+    text-align: center;
+}
+
+.menu1 {
+    display: flex;
+    background: white;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.menu1 a {
+    margin-top: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+    font-size: 2em;
+    text-align: center;
+
+    position: fixed;
+    top: 0;
+    /* left: 3em; */
+    width: 90%;
+    z-index: 1000;
+}
+
+nav a:hover {
+    color: darkgray;
+}
+
+.logo {
+    text-align: left;
+    height: auto;
+    object-fit: cover;
+    box-sizing: border-box;
+    display: block;
+}
+
+#wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.biglogo {
+    margin-top: 200px;
+    text-align: center;
+    object-fit: cover;
+}
+
+.biglogo img {
+    width: 100px;
+}
+
+
+article {
+    text-align: center;
+}
+
+.question {
+    font-size: 2em;
+}
+
+article p {
+    font-size: 2em;
+}
+
+article button {
+    aspect-ratio: 1 / 1;
+}
+
+
+
+.adH {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.adH img {
+    width: 60%;
+    aspect-ratio: auto;
+}
+
+.adV {
+    text-align: right;
+    /* position: fixed; */
+    right: 0;
+}
+
+.adV img {
+    aspect-ratio: auto;
+    width: 15%;
+}
+
+.adS {
+    position: fixed;
+    bottom: 0;
+}
+
+.adS img {
+    object-fit: cover;
+    width: 40%;
+}

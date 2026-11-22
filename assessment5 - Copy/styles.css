@@ -30,6 +30,7 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
     border: 10px solid #edebe4;
     /* ANIMATE ZOOM AND TRANSPARENCY CHANGES OVER 0.3S */
+    box-sizing: border-box;
 
 }
 
@@ -47,6 +48,7 @@ body {
     padding: 8px;
     border-radius: 4px;
     white-space: nowrap;
+    font-size: 80%;
     /* KEEP THE TEXT ON ONE LINE */
 }
 
@@ -119,9 +121,10 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 5em;
-    margin-top: 5em;
+    font-size: clamp(1.5rem, 5vw, 5em);
+    margin-top: 3em;
     margin-bottom: 1em;
+    line-height: 70px;
 }
 
 header h2 {
@@ -134,7 +137,7 @@ header h2 {
 
 .stories-title {
     text-align: right;
-    font-size: 3em;
+    font-size: 50px;
 }
 
 .intro {
@@ -143,6 +146,8 @@ header h2 {
     margin-bottom: 1em;
     text-align: center;
     width: 900px;
+    width: 100%;
+    font-size: clamp(0.9rem, 1.6vw, 2rem);
 }
 
 header h3 {
@@ -270,6 +275,7 @@ footer a {
 .im {
     width: 100%;
     height: auto;
+    margin-top: 100px;
     aspect-ratio: 1 / 1;
     /* REQUEST A SQUARE IMAGE AREA */
     object-fit: cover;
@@ -282,94 +288,120 @@ footer a {
 
 /* FIRST AND SECOND ROWS */
 
+.center-text {
+    grid-column: 5 / 9;
+    /* the 4 empty middle columns */
+    grid-row: 1 / 11;
+    /* same height as the image rows */
+    align-self: center;
+    /* vertically centred between the images */
+    text-align: center;
+    padding: 0 1.5em;
+    /* breathing room so nothing touches */
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+
+
 /* IMAGE 1: UPPER-LEFT POSITION */
 .im1 {
     /* SPAN 3 COLUMNS */
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
 
     /* SPAN 2 ROWS */
     grid-row: 1 / 3;
+
 }
 
 /* IMAGE 2: BESIDE IMAGE 1 */
 .im2 {
     /* SPAN THE NEXT 2 COLUMNS */
-    grid-column: 4 / 7;
+    grid-column: 3 / 5;
 
     /* SPAN THE SAME 2 ROWS */
     grid-row: 1 / 3;
+
 }
 
 /* IMAGE 3: LARGE RECTANGLE ON THE RIGHT */
 .im3 {
     /* SPAN 6 COLUMNS */
-    grid-column: 7 / 13;
+    grid-column: 1 / 3;
 
     /* SPAN 4 ROWS */
-    grid-row: 1 / 5;
+    grid-row: 4 / 6;
+
 }
 
 /* IMAGE 4: BELOW IMAGE 1 */
 .im4 {
     /* USE THE SAME 3 COLUMNS AS IMAGE 1 */
-    grid-column: 1 / 4;
+    grid-column: 9 / 11;
 
     /* SPANS ROWS 3 AND 4 */
-    grid-row: 3 / 5;
+    grid-row: 1 / 3;
+
 }
 
 /* IMAGE 5: BELOW IMAGE 2 */
 .im5 {
     /* USE THE SAME 3 COLUMNS AS IMAGE 2 */
-    grid-column: 4 / 7;
+    grid-column: 11 / 13;
 
     /* SPANS ROWS 3 AND 4 */
-    grid-row: 3 / 5;
+    grid-row: 1 / 3;
+
 }
 
 /* IMAGE 6: LARGE RECTANGLE ON THE LEFT */
 .im6 {
     /* SPAN 6 COLUMNS */
-    grid-column: 1 / 7;
+    grid-column: 11 / 13;
 
     /* SPANS 4 ROWS */
-    grid-row: 5 / 9;
+    grid-row: 5 / 6;
+
 }
 
 /* IMAGE 7: BELOW IMAGE 2 */
 .im7 {
     /* USE THE SAME 3 COLUMNS */
-    grid-column: 7 / 10;
+    grid-column: 1 / 3;
 
     /* SPANS 2 ROWS */
-    grid-row: 5 / 7;
+    grid-row: 6 / 8;
+
 }
 
 /* IMAGE 8: BESIDE IMAGE 7 */
 .im8 {
     /* SPAN THE LAST 3 COLUMNS */
-    grid-column: 10 / 13;
+    grid-column: 11 / 13;
 
     /* ALIGN WITH IMAGE 7 */
-    grid-row: 5 / 7;
+    grid-row: 6 / 8;
+
 }
 
 /* IMAGE 9: BELOW IMAGE 7 */
 .im9 {
     /* USE THE SAME 3 COLUMNS AS IMAGE 7 */
-    grid-column: 7 / 10;
+    grid-column: 1 / 3;
 
     /* SPANS ROWS 7 AND 8 */
-    grid-row: 7 / 9;
+    grid-row: 8 / 10;
+
 }
 
 /* IMAGE 10: BELOW IMAGE 8 */
 .im10 {
     /* USE THE SAME 3 COLUMNS AS IMAGE 8 */
-    grid-column: 10 / 13;
+    grid-column: 11 / 13;
 
     /* SPANS ROWS 7 AND 8 */
-    grid-row: 7 / 9;
+    grid-row: 8 / 10;
+
 }
 
 /* FINAL ROWL IMAGES 11 TO 14 */
@@ -379,10 +411,11 @@ footer a {
 .im11,
 .im13 {
     /* INITIALLY ASSIGN THE FIRST 3 COLUMNS */
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
 
     /* SPAN THE FINAL 2 ROWS */
-    grid-row: 9 / 11;
+    grid-row: 10 / 12;
+
 }
 
 /* APPLY SHARED POSITIONING TO IMAGES 12 AND 14 */
@@ -390,25 +423,30 @@ footer a {
 .im12,
 .im14 {
     /* INITIALLY ASSIGN THE COLUMNS 4 THROUGH 6 */
-    grid-column: 4 / 7;
+    grid-column: 11 / 13;
 
     /* SPAN THE FINAL 2 ROWS */
-    grid-row: 9 / 11;
+    grid-row: 10 / 12;
+
 }
 
 /* OVERRIDE THE STARTING POSITION FOR IMAGE 13 */
 .im13 {
     /* PLACE IMAGE 13 TO COLUMN 7 THROUGH 9 */
-    grid-column: 7 / 10;
+    grid-column: 3 / 5;
 }
 
 /* OVERRIDE THE STARTING POSITION FOR IMAGE 14 */
 .im14 {
     /* PLACE IMAGE 14 TO COLUMN 10 THROUGH 12 */
-    grid-column: 10 / 13;
+    grid-column: 9 / 11;
 }
 
 /* END OF THE IMAE GRID */
+
+
+/* --------------------------------------------------------------------------------------- */
+
 
 /* SOCIAL MEDIA CONTAINER */
 
@@ -651,6 +689,7 @@ body:has(.github:hover) {
         margin: 0 auto;
         float: none;
         /* PREVENT THE WRAPPER FROM FLOATING TO ONE SIDE */
+        padding-top: 80px;
     }
 
     footer {
@@ -672,6 +711,16 @@ body:has(.github:hover) {
         padding: 0;
         grid-auto-flow: row;
         align-items: start;
+    }
+
+    .pict .center-text {
+        grid-column: 1 / -1;
+        /* span both mobile columns */
+        grid-row: auto;
+        /* stop spanning rows 1-10 */
+        order: -1;
+        /* show the text before the images; remove if you'd rather have it after */
+        padding: 0;
     }
 
     /* RESET DESKTOP POS AND CONSTRAIN EACH GRID ITEM, THE SPECIAL CHARACTER ^ IS CALLED A CARET. IN CSS, WHEN USED INSIDE AN ATTRIBUTE SELECTOR, IT MEANS "start with", ^= MEANS THE ATTRIBUTE VALUE MUST START WITH THE SPECIFIED TEXT */

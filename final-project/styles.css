@@ -92,7 +92,7 @@ article button {
 
 }
 
-button:hover {
+article button:hover {
     cursor: pointer;
     background-color: rgb(234, 234, 234);
     transform: scale(1.05);
@@ -209,4 +209,30 @@ button:hover {
     background: rgb(97, 97, 97);
     cursor: pointer;
     border-radius: 50%;
+}
+
+.p3-confirm {
+    aspect-ratio: auto;
+    margin-top: 4em;
+    background: none;
+    width: 250px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+    display: block;
+    align-self: center;
+    justify-self: center;
+    border-radius: 25px;
+}
+
+.p3-confirm a {
+    text-decoration: none;
+    color: black;
+}
+
+.p3-confirm:hover {
+    cursor: pointer;
+    background-color: rgb(234, 234, 234);
+    transform: scale(1.05);
 }

@@ -9,7 +9,8 @@ header {
 
 .menu1 {
     display: flex;
-    background: white;
+    background: none;
+    width: 100%;
     justify-content: space-around;
     /* align-items: center; */
 }
@@ -26,9 +27,11 @@ nav {
     align-items: center;
     font-size: 2em;
     text-align: center;
+    background: none;
 
     position: fixed;
     top: 0;
+    /* left: 0; */
     /* left: 3em; */
     width: 90%;
     z-index: 1000;
@@ -52,7 +55,7 @@ nav a:hover {
 }
 
 .biglogo {
-    margin-top: 200px;
+    margin-top: 100px;
     text-align: center;
     object-fit: cover;
 }
@@ -104,6 +107,23 @@ article button:hover {
 }
 
 
+.progress-bar {
+    width: 70%;
+    height: 32px;
+    justify-self: center;
+    background-color: #ddd;
+    /* the empty track */
+}
+
+.progress-tracker {
+    height: 100%;
+    background-color: #4b4b4e;
+    /* the filled part */
+}
+
+p {
+    font-size: 2em;
+}
 
 
 /* ------------------------------------------------------- */
@@ -113,22 +133,24 @@ article button:hover {
 .adH {
     position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    width: 60%;
     margin: 0;
     text-align: center;
+    z-index: 10;
+    justify-self: center;
 }
 
 .adH img {
-    width: 60%;
+    width: 100%;
     aspect-ratio: auto;
+    justify-self: center;
 }
 
 .adV {
     text-align: right;
     position: fixed;
     right: 0;
-    top: 10em;
+    top: 25%;
 }
 
 .adV img {
@@ -143,7 +165,7 @@ article button:hover {
 
 .adS img {
     object-fit: cover;
-    width: 40%;
+    width: 50%;
 }
 
 
@@ -182,7 +204,9 @@ article button:hover {
     margin-top: 20px;
     width: 40%;
     justify-self: center;
-    align-self: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 .slider {
@@ -190,6 +214,7 @@ article button:hover {
     appearance: none;
     width: 100%;
     height: 15px;
+    margin: 0;
     background: rgb(222, 222, 222);
     outline: none;
     opacity: 0.7;
@@ -204,11 +229,32 @@ article button:hover {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     background: rgb(97, 97, 97);
     cursor: pointer;
+    border: none;
     border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border: none;
+    border-radius: 50%;
+    background: rgb(97, 97, 97);
+}
+
+.slider-labels {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.slider-labels span {
+    width: 25px;
+    text-align: center;
 }
 
 .p3-confirm {
@@ -235,4 +281,81 @@ article button:hover {
     cursor: pointer;
     background-color: rgb(234, 234, 234);
     transform: scale(1.05);
+}
+
+/* ------------------------------------------------------- */
+
+
+.personalities-display {
+    display: grid;
+    /* CREATE 12 EQUALLY SIZED COLUMNS */
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.im {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    aspect-ratio: 1 / 1;
+    /* REQUEST A SQUARE IMAGE AREA */
+    object-fit: cover;
+    /* FILL THE IMAGE AREA WITHOUT STRETCHING THE IMAGE. THE IMAGE MAY BE CROPPED TO FIT */
+    box-sizing: border-box;
+    /* INCLUDE THE PADDING AND BORDERS IN THE ELEMENT DIMENSIONS */
+    display: block;
+    /* REMOVE THE EXTRA BASELINE SPACE BETWEEN THE INLINE IMAGES */
+}
+
+/* IMAGE 1: UPPER-LEFT POSITION */
+.im1 {
+    /* SPAN 3 COLUMNS */
+    grid-column: 1 / 4;
+
+    /* SPAN 2 ROWS */
+    grid-row: 1 / 3;
+
+}
+
+/* IMAGE 2: BESIDE IMAGE 1 */
+.im2 {
+    /* SPAN THE NEXT 2 COLUMNS */
+    grid-column: 4 / 7;
+
+    /* SPAN THE SAME 2 ROWS */
+    grid-row: 1 / 3;
+
+}
+
+/* IMAGE 3: LARGE RECTANGLE ON THE RIGHT */
+.im3 {
+    /* SPAN 6 COLUMNS */
+    grid-column: 7 / 10;
+
+    /* SPAN 4 ROWS */
+    grid-row: 1 / 3;
+
+}
+
+/* IMAGE 4: BELOW IMAGE 1 */
+.im4 {
+    /* USE THE SAME 3 COLUMNS AS IMAGE 1 */
+    grid-column: 10 / 14;
+
+    /* SPANS ROWS 3 AND 4 */
+    grid-row: 1 / 3;
+
+}
+
+.personality-type-text {
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    font-size: 30px;
+}
+
+.personality-description {
+    font-size: 20px;
 }

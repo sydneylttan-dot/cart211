@@ -22,14 +22,18 @@
                 <div class="menu1">
                     <a href="index.html" class="menuI"> PERSONALITY TEST </a>
                     <hr>
-                    <a href="#" class="menuI"> PERSONALITY TYPES </a>
+                    <a href="personality-types.html" class="menuI"> PERSONALITY TYPES </a>
                     <hr>
-                    <a href="index.html" class="menuI"> ABOUT </a>
+                    <a href="about.html" class="menuI"> ABOUT </a>
                 </div>
 
             </nav>
 
         </header>
+
+        <div class="progress-bar" style="margin-top: 120px;">
+            <div class="progress-tracker" style="width: 75%;"></div>
+        </div>
 
         <section>
             <div class="biglogo">
@@ -42,16 +46,21 @@
 
     <section>
         <article>
-            <p class="question"> question placeholder?</p>
+            <p class="question"> On a scale of 1 to 5?</p>
 
-            <a style="width: 40; justify-self: center; display: flex; justify-content: space-between;">1 2 3 4 5</a>
             <div class="slidecontainer">
-                <input type="range" min="1" max="5" value="50" class="slider" id="myRange">
-            </div>
+                <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+                <div class="slider-labels">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
 
-            <button type="button" aria-label="Confirm" class="p3-confirm">
-                <a href="page4.html" class="confirm-button"> Confirm </a>
-            </button>
+                <button type="button" aria-label="Confirm" class="p3-confirm">
+                    <a href="page4.html" class="confirm-button"> Confirm </a>
+                </button>
         </article>
     </section>
 

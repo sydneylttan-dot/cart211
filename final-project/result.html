@@ -1,0 +1,10 @@
+<script>
+    const ads = Number(sessionStorage.getItem("adCount")) || 0;
+    const quiz = Number(sessionStorage.getItem("quizCount")) || 0;
+
+    if (ads > 0) {
+        window.location.href = "good-ending-a.html";
+    } else {
+        window.location.href = "bad-ending-page.html";
+    }
+</script>

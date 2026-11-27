@@ -49,22 +49,22 @@
             <section>
                 <article>
                     <p class="question"> question placeholder?</p>
-                    <button type="button" aria-label="Pick Option A">
+                    <button type="button" aria-label="Pick Option A" onclick="go('quiz', 'result.html')">
                         <a href="bad-ending-page.html" class="question-options"> A: Hot Pot</a>
                     </button>
 
 
-                    <button type="button" aria-label="Pick Option B">
+                    <button type="button" aria-label="Pick Option B" onclick="go('quiz', 'result.html')">
                         <a href="bad-ending-page.html" class="question-options"> B: Rain</a>
                     </button>
 
 
-                    <button type="button" aria-label="Pick Option C">
+                    <button type="button" aria-label="Pick Option C" onclick="go('quiz', 'result.html')">
                         <a href="bad-ending-page.html" class="question-options"> C: Ferris Wheel </a>
                     </button>
 
 
-                    <button type="button" aria-label="Pick Option D">
+                    <button type="button" aria-label="Pick Option D" onclick="go('quiz', 'result.html')">
                         <a href="bad-ending-page.html" class="question-options"> D: Plants</a>
                     </button>
                 </article>
@@ -73,22 +73,24 @@
     </section>
 
     <figure class="adH">
-        <a href="ad1.html">
-            <img src="assets/placeholderhorizontal.png">
+        <a>
+            <img src="assets/placeholderhorizontal.png" onclick="go('ad', 'ad1.html')">
         </a>
     </figure>
 
     <figure class="adV">
-        <a href="ad2.html">
-            <img src="assets/placeholdervertical.png">
+        <a>
+            <img src="assets/placeholdervertical.png" onclick="go('ad', 'ad2.html')">
         </a>
     </figure>
 
     <figure class="adS">
-        <a href="ad3.html">
-            <img src="assets/placeholdersquare.png">
+        <a>
+            <img src="assets/placeholdersquare.png" onclick="go('ad', 'ad3.html')">
         </a>
     </figure>
+
+    <script src="tracker.js"></script>
 
 </body>
 

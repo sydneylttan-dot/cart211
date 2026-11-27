@@ -58,29 +58,31 @@
                     <span>5</span>
                 </div>
 
-                <button type="button" aria-label="Confirm" class="p3-confirm">
-                    <a href="page4.html" class="confirm-button"> Confirm </a>
+                <button type="button" aria-label="Confirm" class="p3-confirm" onclick="go('quiz', 'page4.html')">
+                    <a class="confirm-button"> Confirm </a>
                 </button>
         </article>
     </section>
 
     <figure class="adH">
-        <a href="ad1.html">
-            <img src="assets/placeholderhorizontal.png">
+        <a>
+            <img src="assets/placeholderhorizontal.png" onclick="go('ad', 'ad1.html')">
         </a>
     </figure>
 
     <figure class="adV">
-        <a href="ad2.html">
-            <img src="assets/placeholdervertical.png">
+        <a>
+            <img src="assets/placeholdervertical.png" onclick="go('ad', 'ad2.html')">
         </a>
     </figure>
 
     <figure class="adS">
-        <a href="ad3.html">
-            <img src="assets/placeholdersquare.png">
+        <a>
+            <img src="assets/placeholdersquare.png" onclick="go('ad', 'ad3.html')">
         </a>
     </figure>
+
+    <script src="tracker.js"></script>
 
 </body>
 
